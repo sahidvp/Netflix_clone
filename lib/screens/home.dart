@@ -1,46 +1,5 @@
 
 
-// import 'package:flutter/material.dart';
-
-// class HomeScreen extends StatefulWidget {
-//   const HomeScreen({Key? key}) : super(key: key);
-
-//   @override
-//   State<HomeScreen> createState() => _HomeScreenState();
-// }
-
-// class _HomeScreenState extends State<HomeScreen> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         backgroundColor:
-//             Colors.transparent, // Set the background color to transparent
-//         elevation: 0, // Remove the elevation
-//         leading: const Row(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             SizedBox(
-//               width: 10,
-//             ),
-//             SizedBox(
-//                 width: 30,
-//                 height: 30,
-//                 child: Image(
-//                     image:
-//                         AssetImage("images/netflix.png"))),
-//                         Text("data"),
-//                         Text("data"), // Your logo image
-//                         Text("data"), // Your logo image
-//                          // Your logo image
-//            // Adjust the spacing between the logo and text widgets
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:netfli_project/api/api_constants.dart';

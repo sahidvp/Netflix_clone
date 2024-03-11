@@ -105,7 +105,7 @@ class _BottomNavigationbarState extends State<BottomNavigationbar> {
   final List<Widget> pages = [
     const HomeView(),
     const GameScreen(),
-    const ComingSoon(),
+    const FavoriteView(),
     const Downloads(),
     const SearchPage(),
   ];
@@ -143,7 +143,7 @@ class _BottomNavigationbarState extends State<BottomNavigationbar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.ondemand_video_sharp),
-            label: "Coming Soon",
+            label: "To watch",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.file_download_outlined),

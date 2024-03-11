@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:netfli_project/api/api_constants.dart';
 //import 'constants.dart';
+
 import 'model_json.dart';
 
 class MovieService {
@@ -27,6 +28,19 @@ class MovieService {
       return results.map((json) => ApiDataModel.fromJson(json)).toList();
     } else {
       throw Exception('Could Not Fetch Movies');
+    }
+  }
+
+  Future<List<String>> getSearchSuggestions(String query) async {
+    final url = Uri.parse(
+        '${ApiConfig.baseUrl}${ApiConfig.searchMovies}${ApiConfig.apiKey}&query=$query');
+    final response = await http.get(url);
+    if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      final List<dynamic> results = data['results'];
+      return results.map((json) => json['title'] ?? json['name']).cast<String>().toList();
+    } else {
+      throw Exception('Could Not Fetch Search Suggestions');
     }
   }
 }
